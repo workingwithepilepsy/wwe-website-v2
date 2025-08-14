@@ -1,51 +1,21 @@
 {
   "compilerOptions": {
-    // Language and Environment
     "target": "ES2020",
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "jsx": "react-jsx",
     "module": "ESNext",
-    
-    // Module Resolution
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    
-    // Type Checking
     "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitThis": true,
-    "noImplicitReturns": true,
-    "strictNullChecks": true,
-    "strictFunctionTypes": true,
-    "strictBindCallApply": true,
-    "strictPropertyInitialization": true,
-    "alwaysStrict": true,
-    
-    // JavaScript Support
     "allowJs": true,
-    "checkJs": false,
-    
-    // Emit
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
-    
-    // Interop Constraints
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
-    
-    // Skip Lib Check
     "skipLibCheck": true,
-    
-    // Path Mapping
     "baseUrl": ".",
+    "types": [],
     "paths": {
       "@/*": ["./src/*"],
       "@components/*": ["./src/components/*"],
@@ -55,37 +25,20 @@
       "@styles/*": ["./src/styles/*"],
       "@context/*": ["./src/context/*"],
       "@types/*": ["./src/types/*"],
-      "@shared/*": ["./shared/*"]
-    },
-    
-    // Additional Options
-    "typeRoots": ["./node_modules/@types", "./src/types"],
-    "types": [
-      "node",
-      "react",
-      "react-dom",
-      "@testing-library/jest-dom",
-      "vite/client"
-    ]
+      "@shared/*": ["../shared/*"]
+    }
   },
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
     "src/**/*.js",
-    "src/**/*.jsx",
-    "vite.config.ts",
-    "tailwind.config.ts",
-    "postcss.config.js"
+    "src/**/*.jsx"
   ],
   "exclude": [
     "node_modules",
     "dist",
-    "build",
-    "coverage",
-    "**/*.spec.ts",
-    "**/*.test.ts"
-  ],
-  "references": [
-    { "path": "./tsconfig.node.json" }
+    "build"
+  ]
+}
   ]
 }
